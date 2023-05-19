@@ -1,0 +1,36 @@
+* {    margin: 0;    padding: 0;    outline: none;}
+:root{
+  --color-primary:#16384c;
+  --color-secoundary:#fff;
+}
+@font-face {
+  font-family: Vazir ;
+  src: url(fonts/eot/Vazir.eot),
+  url(fonts/ttf/Vazir.ttf),
+  url(fonts/woff/Vazir.woff),
+  url(fonts/woff2/Vazir.woff2);
+}
+body {  width: 100%;  height: 100%;  position: fixed;
+  background-color:var(--color-secoundary);
+}
+*, *:before, *:after {  margin: 0;  padding: 0;  box-sizing: border-box;
+  position: relative;
+  }
+
+html, body {height: 100%;  }
+body {  text-align: center;  background-color:var(--color-primary)  }
+body:before {  content: '';  display: inline-block;  vertical-align: middle;
+  font-size: 0;  height: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+h1 {  display: inline-block;  color: white;  font-size: 80pt;  font-family: 'Righteous';
+  text-shadow: .03em .03em 0 var(--color-primary);
+}
+h1:after {  content: attr(data-shadow);  position: absolute;  top: .06em; left: .06em;
+  z-index: -1;  text-shadow: none;  background-image:  linear-gradient(  45deg,
+  transparent 45%,  hsla(48,20%,90%,1) 45%,  hsla(48,20%,90%,1) 55%,  transparent 0);
+  background-size: .05em .05em;  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  animation: shad-anim 15s linear infinite;
+  }
+
+@keyframes shad-anim {  0% {background-position: 0 0}  0% {background-position: 100% -100%}  }
